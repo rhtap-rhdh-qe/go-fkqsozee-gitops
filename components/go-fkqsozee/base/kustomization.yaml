@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-fkqsozee
+  janus-idp.io/tekton: go-fkqsozee
+  backstage.io/kubernetes-id: go-fkqsozee
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-fkqsozee
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
